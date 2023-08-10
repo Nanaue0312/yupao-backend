@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: zhuzm0212.
+    url: jdbc:mysql://localhost:3306/yupao?userSSL=false&serverTimezone=UTC
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  redis:
+    port: 6379
+    host: localhost
+    password: zhuzm0212.
+    database: 0
+
+  session:
+    store-type: redis
+    timeout: 86400 #分钟
+server:
+  servlet:
+    context-path: /api
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      logic-delete-field: isDelete
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
