@@ -10,8 +10,8 @@ import com.yupao.common.ResultUtils;
 import com.yupao.constant.UserConstant;
 import com.yupao.exception.BusinessException;
 import com.yupao.model.domain.User;
-import com.yupao.model.domain.request.UserLoginRequest;
-import com.yupao.model.domain.request.UserRegisterRequest;
+import com.yupao.model.request.UserLoginRequest;
+import com.yupao.model.request.UserRegisterRequest;
 import com.yupao.service.UserService;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -40,7 +40,7 @@ public class UserController {
      * @return 新用户id
      */
     @PostMapping("/register")
-    public BaseResponse userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
+    public BaseResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
         if (userRegisterRequest == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }

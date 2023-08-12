@@ -29,6 +29,7 @@
         avatar_url,gender,user_password,
         tele,email,status,
         create_time,update_time,is_delete,
-        user_role,tags,planet_code
+        user_role,tags,planet_code,
+        profile
     </sql>
 </mapper>

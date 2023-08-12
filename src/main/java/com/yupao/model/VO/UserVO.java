@@ -1,24 +1,14 @@
-package com.yupao.model.domain;
+package com.yupao.model.VO;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @TableName user
+ * 用户包装类
  */
-@TableName(value = "user")
 @Data
-public class User implements Serializable {
-    /**
-     * 用户id
-     */
-    @TableId
+public class UserVO {
     private Long id;
 
     /**
@@ -41,15 +31,6 @@ public class User implements Serializable {
      */
     private Integer gender;
 
-    /**
-     * 密码
-     */
-    private String userPassword;
-
-    /**
-     * 手机号
-     */
-    private String tele;
 
     /**
      * 用户邮箱
@@ -71,11 +52,6 @@ public class User implements Serializable {
      */
     private Date updateTime;
 
-    /**
-     * 逻辑删除：0-删除，1-正常
-     */
-    @TableLogic
-    private Integer isDelete;
 
     /**
      * 用户角色：0-普通用户，1-管理员
@@ -91,11 +67,9 @@ public class User implements Serializable {
      * 星球id
      */
     private String planetCode;
+
     /**
      * 个人简介
      */
     private String profile;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 }

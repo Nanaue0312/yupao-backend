@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: zhuzm0212.
-    url: jdbc:mysql://localhost:3306/yupao?userSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/yupao?userSSL=false&serverTimezone=Asia/Shanghai
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
