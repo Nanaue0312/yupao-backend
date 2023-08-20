@@ -225,7 +225,6 @@ curl "https://api.zsxq.com/v2/hashtags/48844541281228/topics?count=20" ^
    - 校验用户最多创建5个队伍
 4. 添加队伍信息到队伍列表
 5. 添加**队伍<=>队员**到user_to_team表
-6. zhi'you
 
 ### 查询队伍
 

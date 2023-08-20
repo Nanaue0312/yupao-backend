@@ -11,6 +11,9 @@ import java.util.Date;
 @Data
 public class UserToTeamVO implements Serializable {
     private static final long serialVersionUID = 385125388252478222L;
+    /**
+     * 队伍id
+     */
     private Long id;
 
     /**
@@ -36,7 +39,7 @@ public class UserToTeamVO implements Serializable {
     /**
      * 创建者用户id
      */
-    private Long userid;
+    private Long userId;
 
     /**
      * 状态：0-公开，1-私密，2-加密
@@ -57,4 +60,12 @@ public class UserToTeamVO implements Serializable {
      * 队伍的创建者
      */
     private UserVO createUser;
+    /**
+     * 是否加入队伍
+     */
+    private Boolean isJoined = false;
+    /**
+     * 队伍加入的人数
+     */
+    private Integer joinedCount;
 }
